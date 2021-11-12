@@ -1,98 +1,103 @@
 <a href="{{ '/' | relative_url }}">
-    <div class="nav-logo">
-        <img src="./assets/img/mlh-prep.png" />
-    </div>
+  <div class="nav-logo">
+    <img src="./assets/img/mlh-prep.png" />
+  </div>
 </a>
 
 <header class="nav-bar">
-
-    <div class="nav-container">
-        <!-- MLH PREP logo -->
-        <div class="brand">
-            <a href="{{ '/' | relative_url }}">
-                <div class="nav-logo">
-                    <img src="./assets/img/mlh-prep.png" />
-                </div>
-            </a>
+  <div class="nav-container">
+    <!-- MLH PREP logo -->
+    <div class="brand">
+      <a href="{{ '/' | relative_url }}">
+        <div class="nav-logo">
+          <img src="./assets/img/mlh-prep.png" />
         </div>
-
-        <nav>
-            <!-- The navbar links in full screen -->
-            <ul class="nav-list">
-                <li>
-                    <a href="{{ '/' | relative_url }}">Home</a>
-                </li>
-                <li>
-                    <a href="#profile-section">Meet the pod</a>
-                </li>
-                <li>
-                    <a href="#project-section">Projects</a>
-                </li>
-                <li>
-                    <a href="#">Locate Fellows</a>
-                </li>
-            </ul>
-
-            <!-- Hamburger icon -->
-            <div class="burger">
-                <div id="top"></div>
-                <div id="middle"></div>
-                <div id="bottom"></div>
-            </div>
-
-            <!-- Sidepane for when screen width below 800px -->
-            <div class="sidepane">
-                <ul class="side-links">
-                    <li>
-                        <a href="{{ '/' | relative_url }}">Home</a>
-                    </li>
-                    <li>
-                        <a href="#profile-section">Meet the pod</a>
-                    </li>
-                    <li>
-                        <a href="#project-section">Projects</a>
-                    </li>
-                    <li><a href="#">Locate Fellows</a></li>
-                </ul>
-            </div>
-        </nav>
+      </a>
     </div>
+
+    <nav>
+      <!-- The navbar links in full screen -->
+      <ul class="nav-list">
+        <li>
+          <a href="{{ '/' | relative_url }}">Home</a>
+        </li>
+        <li>
+          <a href="#profile-section">Meet the pod</a>
+        </li>
+        <li>
+          <a href="#project-section">Projects</a>
+        </li>
+        <li>
+          <a href="#blog-section">Blog</a>
+        </li>
+        <li>
+          <a href="#">Locate Fellows</a>
+        </li>
+      </ul>
+
+      <!-- Hamburger icon -->
+      <div class="burger">
+        <div id="top"></div>
+        <div id="middle"></div>
+        <div id="bottom"></div>
+      </div>
+
+      <!-- Sidepane for when screen width below 800px -->
+      <div class="sidepane">
+        <ul class="side-links">
+          <li>
+            <a href="{{ '/' | relative_url }}">Home</a>
+          </li>
+          <li>
+            <a href="#profile-section">Meet the pod</a>
+          </li>
+          <li>
+            <a href="#project-section">Projects</a>
+          </li>
+          <li><a href="#">Locate Fellows</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </header>
 
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 
 <script type="text/javascript">
+  // script to animate the visibility of the navbar here
+  window.onscroll = function () {
+    scrollFunction();
+  };
 
-    // script to animate the visibility of the navbar here
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-        // console.log(document.documentElement.scrollTop);
-        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 0) {
-            document.getElementsByClassName("nav-bar")[0].style.top = "0";
-        } else {
-            document.getElementsByClassName("nav-bar")[0].style.top = "-200px";
-            document.querySelector(".sidepane").classList.remove("expanded");
-            document.querySelector("#top").classList.remove("top");
-            document.querySelector("#middle").classList.remove("middle");
-            document.querySelector("#bottom").classList.remove("bottom");
-        }
+  function scrollFunction() {
+    // console.log(document.documentElement.scrollTop);
+    if (
+      document.body.scrollTop > 40 ||
+      document.documentElement.scrollTop > 0
+    ) {
+      document.getElementsByClassName("nav-bar")[0].style.top = "0";
+    } else {
+      document.getElementsByClassName("nav-bar")[0].style.top = "-200px";
+      document.querySelector(".sidepane").classList.remove("expanded");
+      document.querySelector("#top").classList.remove("top");
+      document.querySelector("#middle").classList.remove("middle");
+      document.querySelector("#bottom").classList.remove("bottom");
     }
+  }
 
-    // To handle sidebar toggle
+  // To handle sidebar toggle
+  const sidepane = document.querySelector(".sidepane");
+  sidepane.classList.remove("expanded");
+
+  document.querySelector(".burger").addEventListener("click", () => {
+    const top = document.querySelector("#top");
+    const middle = document.querySelector("#middle");
+    const bottom = document.querySelector("#bottom");
     const sidepane = document.querySelector(".sidepane");
-    sidepane.classList.remove("expanded");
 
-    document.querySelector(".burger").addEventListener('click', () => {
-        const top = document.querySelector("#top");
-        const middle = document.querySelector("#middle");
-        const bottom = document.querySelector("#bottom");
-        const sidepane = document.querySelector(".sidepane");
-
-        sidepane.classList.toggle("expanded");
-        top.classList.toggle("top");
-        middle.classList.toggle("middle");
-        bottom.classList.toggle("bottom");
-    })
-
+    sidepane.classList.toggle("expanded");
+    top.classList.toggle("top");
+    middle.classList.toggle("middle");
+    bottom.classList.toggle("bottom");
+  });
 </script>
