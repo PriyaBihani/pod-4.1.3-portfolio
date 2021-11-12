@@ -1,26 +1,22 @@
-<h2>
-  LeaderBoard
-</h2>
+<h2 class="heading" data-aos="fade-up" data-aos-duration="500">LeaderBoard</h2>
 
-<div class="leaderboard-table">
+<div class="leaderboard-table" data-aos="fade-up" data-aos-duration="700">
   <table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Rank</th>
-      <th scope="col">Team</th>
-      <th scope="col">Member 1</th>
-      <th scope="col">Member 2</th>
-      <th scope="col">PRs Merged</th>
-    </tr>
-  </thead>
-  <tbody id="leaderboard-tablebody">
-
-  </tbody>
-</table>
+    <thead>
+      <tr>
+        <th scope="col">Rank</th>
+        <th scope="col">Team</th>
+        <th scope="col">Member 1</th>
+        <th scope="col">Member 2</th>
+        <th scope="col">PRs Merged</th>
+      </tr>
+    </thead>
+    <tbody id="leaderboard-tablebody"></tbody>
+  </table>
 </div>
 
 <script>
-let vara=-1;
+  let vara = -1;
 
 let teams = 
 [
@@ -74,14 +70,12 @@ let teams =
   }
 ]
 
-function compare( a, b ) {
-  if ( a.PRs > b.PRs ){
-    return -1;
+  function compare(a, b) {
+    if (a.PRs > b.PRs) {
+      return -1;
+    }
+    return 1;
   }
-  return 1;
-}
-
-
 
   const fetchGithubStats = () => {
     const requests1 = teams.map((team,index) => {
@@ -117,25 +111,24 @@ function compare( a, b ) {
     return Promise.all(requests1,requests2).then(() => {
       console.log(teams);
       teams.sort(compare);
-      const par=document.getElementById('leaderboard-tablebody');
-      teams.map((team,index) => {
+      const par = document.getElementById("leaderboard-tablebody");
+      teams.map((team, index) => {
         var tableRow = document.createElement("tr");
         var rank = document.createElement("td");
-        rank.innerHTML=index+1;
+        rank.innerHTML = index + 1;
         var teamName = document.createElement("td");
-        teamName.innerHTML="Team " + team.team;
+        teamName.innerHTML = "Team " + team.team;
         var username1 = document.createElement("td");
-        username1.innerHTML=team.username1;
+        username1.innerHTML = team.username1;
         var username2 = document.createElement("td");
-        username2.innerHTML=team.username2;
+        username2.innerHTML = team.username2;
         var count = document.createElement("td");
-        count.innerHTML=team.PRs;
-        tableRow.append(rank,teamName,username1,username2,count);
+        count.innerHTML = team.PRs;
+        tableRow.append(rank, teamName, username1, username2, count);
         par.append(tableRow);
-      })
-  });
-}
+      });
+    });
+  };
 
-fetchGithubStats();
-
+  fetchGithubStats();
 </script>
