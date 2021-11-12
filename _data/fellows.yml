@@ -2,53 +2,13 @@
   img: logo.jpg
   location: London, UK
 
-- name: Grace Omotoso
-  img: Grace-Omotoso.jpg
-  location: Murfreesboro, Tennessee
+- name: Amanda
+  img: amanda.jpg
+  location: New York City, USA
 
-- name: Sai Keshari
-  img: Sai-Keshari.png
-  location: Delhi, India
-
-- name: Neha Kumari
-  img: Neha-Kumari.jpg
-  location: Ranchi, India
-
-- name: Ojuswi Rastogi
-  img: Ojuswi-Rastogi.jpg
-  location: Noida, Uttar Pradesh, India
-
-- name: Abdulrahman Yusuf
-  img: Abdulrahman-Yusuf.jpg
-  location: Lagos, Nigeria
-
-- name: Yuheng Wu
-  img: Yuheng-Wu.png
-  location: Beijing, China
-
-- name: Adarsh Naidu
-  img: Adarsh-Naidu.jpg
-  location: Bengaluru, India
-
-- name: Akshita Dixit
-  img: Akshita-Dixit.jpg
-  location: Kanpur, Uttar Pradesh, India
-
-- name: Hou Chi Chan
-  img: Hou-Chi-Chan.png
-  location: Massachusetts, Boston, United States
-
-- name: Gaurav Kumar
-  img: Gaurav-Kumar.png
-  location: Bharuch, Gujarat, India
-
-- name: Shubham Bhardwaj
-  img: Shubham-Bhardwaj.jpg
-  location: Delhi, India
-
-- name: Sumana Basu
-  img: Sumana-Basu.jpg
-  location: Noida, Uttar Pradesh, India
+- name: Aaron
+  img: aaron.jpg
+  location: London, UK
 
 - name: Swift
   img: swift.jpg
