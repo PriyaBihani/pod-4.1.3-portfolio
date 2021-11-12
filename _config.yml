@@ -11,3 +11,14 @@ sass:
   sass_dir: _sass
 
 icon: /assets/img/icon.jpg
+
+collections:
+  fellows:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "fellows"
+    values:
+      layout: "fellow"
