@@ -4,10 +4,47 @@
 @import "profile";
 @import "page";
 @import "project";
-@import "blog";
 @import "map";
+@import "blog";
 @import "loader";
 @import "description";
+@import "scrollButton";
+@import "aboutUs.scss";
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  height: 100%;
+}
+
+.footer-img {
+  width: 70%;
+}
+
+.footer-links-header {
+  color: var(--color-footer-link-header);
+}
+
+@media only screen and (max-width: 1000px) {
+  .footer-img {
+    width: 300px;
+    padding: 1%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-img {
+    width: 200px;
+  }
+
+  .footer-subtitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 body {
   background-color: #f5f5f9;
@@ -18,6 +55,13 @@ h2 {
   margin-top: 20px;
   font-weight: 700;
   text-align: center;
+}
+
+.heading {
+  font-size: 35px;
+  @media screen and (max-width: 500px) {
+    font-size: 25px;
+  }
 }
 
 .card {
