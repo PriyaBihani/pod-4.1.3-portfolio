@@ -78,7 +78,7 @@ $(document).ready(function () {
             section.css("background-color", "#142850");
             div.css("background-color", "#142850");
             projectCard.css({
-                "background-color": "#00A8CC",
+                "background-color": "#3c96de",
             });
             projectH2.css({
                 "color" : "#f5f5f9"
