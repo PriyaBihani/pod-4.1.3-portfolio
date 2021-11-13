@@ -2,7 +2,7 @@
 ---
 
 <head>
-    <title>Fellow profile</title>
+	<title>Fellow profile</title>
 </head>
 
 <link
@@ -19,15 +19,21 @@
 
 	body {
 		font-family: 'Montserrat', sans-serif;
-		background: linear-gradient(270deg, #ffead1, #ffb6bd, #e0b5ff);
+		background: rgb(0, 37, 119);
+		background: linear-gradient(
+			90deg,
+			rgba(0, 37, 119, 1) 19%,
+			rgba(2, 230, 222, 1) 100%
+		);
 		background-size: 150% 150%;
 		animation: backgroundAnimation 10s ease infinite;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 100vw;
-		height: 100vh;
-		margin: 0;
+		min-height: 100vh;
+		margin: 3rem 0;
+		overflow-x: hidden;
 	}
 
 	.profile {
@@ -37,7 +43,7 @@
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		max-height: 750px;
+		min-height: 750px;
 		max-width: 900px;
 	}
 
@@ -65,8 +71,7 @@
 		animation-fill-mode: both;
 		position: relative;
 		border-radius: 10px;
-		box-shadow: 0 25px 45px -20px rgba(255, 0, 47, 0.55),
-			inset 0 0px 120px rgba(255, 0, 47, 0.75);
+		box-shadow: 0 15px 25px -10px #000, inset 0 0px 120px #000;
 		width: 45%;
 		flex: none;
 		background-image: url('https://zephyo.github.io/22Days/code/3/graphics/profile.png');
@@ -110,13 +115,13 @@
 	h1.first-name {
 		animation: titleEffect 1s cubic-bezier(0, 0.2, 0.4, 1);
 		top: -115px;
-		left: -85px;
+		left: -10px;
 	}
 
 	h1.second-name {
 		animation: titleEffect 1s cubic-bezier(0, 0, 0.3, 1);
 		top: -50px;
-		left: -45px;
+		left: 0px;
 	}
 
 	.profile-info h2 {
@@ -129,7 +134,7 @@
 
 	.social-media-icons a,
 	.profile-info h2 {
-		color: #f63d47;
+		color: #02e6de;
 	}
 
 	.profile-info p {
@@ -169,7 +174,7 @@
 	.statistics p {
 		margin: 3%;
 		flex: auto;
-		color: #f63d47;
+		color: #02e6de;
 	}
 
 	.statistics p strong {
@@ -177,6 +182,16 @@
 		color: #000;
 		font-weight: 200;
 		margin-right: 0.3rem;
+	}
+
+	.details {
+		width: 80%;
+		margin-right: 10px;
+		margin-left: 10px;
+		line-height: 2rem;
+		position: relative;
+		left: 100px;
+		padding-bottom: 50px;
 	}
 
 	.icon {
@@ -320,7 +335,7 @@
 			<p>
 				<!-- hello hello, I'm angela, artist and developer 🌼 student at stanford;
 				intern at zynga 🌱 happy to be here! 🌿 let's code the best we can! -->
-                {{content}}
+				{{content}}
 			</p>
 
 			<aside class="social-media-icons">
@@ -345,36 +360,25 @@
 	<section class="statistics">
 		<button class="icon arrow left"></button>
 		<button class="icon arrow right"></button>
-		<p><strong>29</strong> Followers</p>
-		<p><strong>184</strong> Following</p>
-		<p><strong>6</strong> Likes</p>
+		<p>Languages: <strong>{{page.languages}}</strong></p>
+		<p>Hobbies: <strong>{{page.hobbies}}</strong></p>
+	</section>
+
+	<section class="details">
+		<h1>A little something about myself!</h1>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque esse
+			accusantium perspiciatis dolores id odio, deserunt dolorum corrupti
+			excepturi. Veniam, tempore. Quis laboriosam amet aliquid? Doloribus
+			similique voluptatibus mollitia aliquid?
+		</p>
+		<p>
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam mollitia
+			libero, repudiandae nam, illum eius delectus ad, temporibus est
+			consectetur explicabo adipisci quos. Expedita aliquid necessitatibus,
+			error omnis sapiente eius?
+		</p>
 	</section>
 	<button class="icon close"></button>
 	<!-- {{content}} -->
 </main>
-
-<!-- ---
-layout: default
----
-
-<div class="banner">
-    <div class="container">
-        <div class="logo">
-            <a href="/">
-                <img src="/assets/img/mlh-prep.png"/>
-            </a>
-        </div>
-        <div class="title">
-            Name: {{ page.name }}
-        </div>
-    </div>
-</div>
-
-<div class="container page">
-    <img width="200px" style="margin: 10px;" src="../assets/img/{{page.img}}" />
-    <br>
-    <h2>Location {{page.location}}</h2>
-    <br>
-    <h3>About:</h3>
-    {{ content }}
-</div> -->

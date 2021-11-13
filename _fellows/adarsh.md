@@ -6,6 +6,8 @@ img: adarsh.jpg
 linkedin: https://www.linkedin.com/in/adarshnaidu/
 twitter: https://twitter.com/barely_adarsh
 instagram: https://www.instagram.com/naidu.adarsh2511/
+languages: Python, JS, Go
+hobbies: Cinematography
 ---
 
 Hello everyone, I'm a student developer studying in NITK 🌼 I love anime, so suggest me your favorites 🌱 happy to be here! 🌿 let's code the best we can!
