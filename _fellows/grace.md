@@ -1,7 +1,7 @@
 ---
 name: Grace Omotoso
 location: Tennessee, US
-img: amanda.jpg
+img: grace.jpg
 linkedin: https://www.linkedin.com/in/grace-omotoso-18003345/
 languages:
 hobbies:

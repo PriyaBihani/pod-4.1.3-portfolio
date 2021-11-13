@@ -1,7 +1,7 @@
 ---
 name: Abdulrahman Yusuf
 location: Lagos, Nigeria
-img: aaron.jpg
+img: abdulrahman.jpg
 linkedin: https://www.linkedin.com/in/abdulrahman-yusuf-a44463176/
 languages:
 hobbies:

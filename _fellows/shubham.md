@@ -2,7 +2,7 @@
 name: Shubham Bhardwaj
 college:
 location:
-img: logo.jpg
+img: shubham.jpg
 linkedin:
 twitter:
 instagram:
