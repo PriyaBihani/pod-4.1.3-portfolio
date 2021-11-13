@@ -19,6 +19,12 @@
       <!-- The navbar links in full screen -->
       <ul class="nav-list">
         <li>
+          <label id="switch" class="switch">
+            <input id="toggleDark" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </li>
+        <li>
           <a href="{{ '/' | relative_url }}">Home</a>
         </li>
         <li>
@@ -26,9 +32,6 @@
         </li>
         <li>
           <a href="#project-section">Projects</a>
-        </li>
-        <li>
-          <a href="#blog-section">Blog</a>
         </li>
         <li>
           <a href="#locate-fellows">Locate Fellows</a>
@@ -49,12 +52,12 @@
             <a href="{{ '/' | relative_url }}">Home</a>
           </li>
           <li>
-            <a href="#profile-section">Meet the pod</a>
+            <a href="#fellows-section">Meet the pod</a>
           </li>
           <li>
             <a href="#project-section">Projects</a>
           </li>
-          <li><a href="#">Locate Fellows</a></li>
+          <li><a href="#locate-fellows">Locate Fellows</a></li>
         </ul>
       </div>
     </nav>
@@ -94,10 +97,5 @@
     const middle = document.querySelector("#middle");
     const bottom = document.querySelector("#bottom");
     const sidepane = document.querySelector(".sidepane");
-
-    sidepane.classList.toggle("expanded");
-    top.classList.toggle("top");
-    middle.classList.toggle("middle");
-    bottom.classList.toggle("bottom");
-  });
 </script>
+<script src="/assets/js/darkTheme.js"></script>
