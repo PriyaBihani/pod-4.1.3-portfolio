@@ -1,7 +1,7 @@
 ---
 name: Akshita Dixit
 location: Kanpur, IN
-img: amanda.jpg
+img: akshita.jpg
 linkedin: https://www.linkedin.com/in/akshitadixit/
 languages:
 hobbies:

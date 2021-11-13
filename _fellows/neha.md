@@ -2,7 +2,7 @@
 name: Neha Kumari
 college:
 location:
-img: amanda.jpg
+img: neha.jpg
 linkedin:
 twitter:
 instagram:
