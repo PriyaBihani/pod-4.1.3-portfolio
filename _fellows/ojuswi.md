@@ -7,6 +7,8 @@ linkedin:
 twitter:
 instagram:
 facebook:
+languages:
+hobbies:
 ---
 
 Add some content here
