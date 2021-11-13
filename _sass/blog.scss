@@ -1,0 +1,18 @@
+.blog-section {
+  margin: 3rem 0;
+
+  .blog-heading {
+    font-size: 35px;
+  }
+
+  .blog-card {
+    .title {
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+
+    .description {
+      font-size: 16px;
+    }
+  }
+}

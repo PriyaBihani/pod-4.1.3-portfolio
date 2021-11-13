@@ -1,0 +1,20 @@
+<section id="blog-section" class="blog-section">
+  <h2 class="blog-heading" data-aos="fade-up" data-aos-duration="500">Blog</h2>
+  <div class="container" data-aos="fade-up" data-aos-duration="700">
+    <div class="row">
+      {% for item in site.data.blogs %}
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card blog-card">
+          <a href="/blogs/{{ item.blog-name }}">
+            <h1 class="title">{{ item.topic }}</h1>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
+              culpa aperiam repellat cupiditate libero?
+            </p>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
